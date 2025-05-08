@@ -1,0 +1,102 @@
+.nav_imger {
+  background-image: url("../../assets/covers.png");
+  height: 180px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center 3%;
+  display: flex;
+  justify-content: space-between;
+  padding: 30px;
+  align-items: center;
+  width: 100%;
+}
+.logo {
+  width: 200px;
+}
+
+.nav_ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav_li {
+  list-style: none;
+  text-transform: uppercase;
+  font-size: 17px;
+  cursor: pointer;
+  font-family: "libr";
+}
+
+.hamburger {
+  display: none;
+}
+
+.hamburge_menu {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  z-index: 1002;
+}
+
+.close-icon-container {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.close-icon {
+  font-size: 30px;
+  color: white;
+}
+
+@media screen and (max-width: 840px) {
+  .second {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+    position: relative;
+  }
+
+  .hamburge_menu {
+    display: block;
+    z-index: 1001;
+  }
+
+  .nav_sm_mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav_ul_mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav_li_mobile {
+    list-style: none;
+    font-family: "libr";
+    font-size: 24px;
+    text-transform: uppercase;
+  }
+
+  .nav_li_mobile a {
+    color: white;
+    text-decoration: none;
+  }
+}

@@ -1,0 +1,136 @@
+.wedding_img .wed_img {
+  height: 70vh;
+  width: 100%;
+  margin-bottom: -40px;
+  object-fit: cover;
+}
+
+.wedding_img {
+  width: 100%;
+  height: auto;
+}
+
+.hehe {
+  height: auto;
+  width: 100%;
+}
+.wed_title {
+  background-color: #000;
+  padding: 40px;
+  font-family: "libr";
+  color: #fff;
+  text-align: center;
+  font-size: 25px;
+  font-weight: 300;
+}
+
+.weddo {
+  text-align: center;
+  padding: 20px;
+}
+
+.weddo_title {
+  font-family: "ant";
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+
+.weddo_address {
+  font-family: "mon";
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.weddo_titme {
+  font-family: "mon";
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+
+.fg {
+  width: 70px;
+  margin-bottom: 20px;
+}
+
+.impo {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+.impo_title {
+  font-family: "ant";
+  text-transform: capitalize;
+  letter-spacing: 1.1px;
+  margin-bottom: 20px;
+}
+
+.wd_para {
+  font-family: "mon";
+  width: 80%;
+  margin: 10px auto 20px auto;
+  line-height: 150%;
+}
+
+.hotel_grid {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.hotel_name {
+  font-family: "ant";
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+.hotel_sub_name {
+  font-family: "mon";
+  font-weight: 300;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+.hotel_sub_feature {
+  font-family: "libr";
+  font-weight: 300;
+  font-size: 18px;
+}
+
+.wc {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media screen and (max-width: 850px) {
+  .wc,
+  .hotel_grid {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hotel_grid {
+gap: 40px;
+  }
+
+
+  .weddo_title{
+    font-size: 38px;
+  }
+
+  .wedding_img .wed_img {
+    height: auto;
+  }
+
+  .wed_title {
+    font-size: 20px;
+    width: 100%;
+    padding: 40px;
+  }
+
+  .wd_para {
+    width: 90%;
+  }
+}

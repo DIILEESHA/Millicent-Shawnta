@@ -1,0 +1,37 @@
+.video_container {
+  height: auto;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.alba {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
+
+.home {
+  height: auto;
+  background-color: #000;
+}
+
+.bottom_home {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  justify-content: center;
+  background: rgba(255, 247, 238, 0.71);
+  /* background-image: url(https://officiallythompson.com/wp-content/uploads/2024/11/bg-kc.png); */
+  background-blend-mode: overlay;
+  opacity: 1;
+  background-image: url("../../assets/bgkc.png");
+}
+
+.logz {
+  width: 370px;
+}
+@media screen and (max-width: 500px) {
+  .logz {
+    width: 100%;
+  }
+}

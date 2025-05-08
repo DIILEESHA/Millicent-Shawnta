@@ -1,0 +1,12 @@
+.footer_title {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding:30px 20px;
+  font-size: 14px;
+  font-family: "mon";
+  text-transform: uppercase;
+  font-weight: 300;
+  letter-spacing: 1.1px;
+  /* font-display:optional; */
+}
