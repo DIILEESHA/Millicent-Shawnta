@@ -45,11 +45,17 @@ const Wedding = () => {
         <p className="wd_para">
           We share our Wedding Weekend with the wildly popular EDC Festival both
           of us in Downtown Orlando. As a result Downtown Hotel costs are
-          elevated. We’ve taken the time to identify and share hotels including
+          elevated.
+          <br />
+          <br />
+          We’ve taken the time to identify and share hotels including
           approximate distance from venue and starting price to help you make an
-          informed decision. Considering the venues central location there are
-          many areas of town that will be convenient for you. We highly
-          recommend booking immediately to avoid price increases.
+          informed decision.
+          <br />
+          <br />
+          Considering the venues central location there are many areas of town
+          that will be convenient for you. We highly recommend booking
+          immediately to avoid price increases.
         </p>
 
         <div className="line"></div>
