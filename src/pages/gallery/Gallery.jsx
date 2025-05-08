@@ -20,7 +20,7 @@ const Gallery = () => {
     <div className="gallery">
       <div className="min_gallery">
         <div className="line"></div>
-        <h2 className="couple_name">Kash + Chris</h2>
+        <h2 className="couple_name">Millicent + Shawnta</h2>
         <p className="gallery_para">
           We're thrilled to share a glimpse of our wedding photoshoot with you!
           These images capture the love, joy, and excitement we felt as we
