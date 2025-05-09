@@ -1,0 +1,47 @@
+.password-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #f0f2f5;
+  padding: 20px;
+}
+
+.password-card {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.password-logo {
+  margin-bottom: 24px;
+}
+
+.password-title {
+  margin-bottom: 24px !important;
+  color: #333;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 576px) {
+  .password-card {
+    padding: 20px;
+  }
+  
+  .password-title {
+    font-size: 20px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .password-container {
+    padding: 10px;
+  }
+  
+  .password-card {
+    padding: 15px;
+  }
+}
