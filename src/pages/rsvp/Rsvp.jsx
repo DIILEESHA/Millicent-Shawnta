@@ -227,8 +227,8 @@ const Rsvp = () => {
           <div className="form_sector">
             <label htmlFor="message" className="form_label">
               {isAttending === "yes"
-                ? "Leave a message for the bride & groom"
-                : "Leave a message for the bride & groom (optional)"}
+                ? "Leave a message for the couple (optional)"
+                : "Leave a message for the couple (optional)"}
             </label>
             <textarea
               id="message"
