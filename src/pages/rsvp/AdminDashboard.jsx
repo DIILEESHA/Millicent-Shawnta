@@ -18,7 +18,7 @@ const AdminDashboard = () => {
   const navigate = useNavigate();
 
   // Correct password (store more securely in production)
-  const ADMIN_PASSWORD = "wedding2025"; 
+  const ADMIN_PASSWORD = "wedding25"; 
 
   useEffect(() => {
     if (authenticated) {
