@@ -14,6 +14,9 @@ import Footer from "./components/footer/Footer";
 import Wedding from "./pages/wedding/Wedding";
 import Rsvp from "./pages/rsvp/Rsvp";
 import "./App.css"; // We'll create this next
+import Qa from "./pages/qa/Qa";
+import Story from "./pages/story/Story";
+import AdminDashboard from "./pages/rsvp/AdminDashboard";
 
 const { Title } = Typography;
 
@@ -153,6 +156,38 @@ const App = () => {
             />
           }
         />
+
+        <Route
+          path="/qa"
+          element={
+            <ProtectedRoute
+              element={
+                <div>
+                  <Nav />
+                  <Qa />
+                  <Footer />
+                </div>
+              }
+            />
+          }
+        />
+
+        <Route
+          path="/story"
+          element={
+            <ProtectedRoute
+              element={
+                <div>
+                  <Nav />
+                  <Story />
+                  <Footer />
+                </div>
+              }
+            />
+          }
+        />
+
+        <Route path="/admin" element={<AdminDashboard />} />
       </Routes>
     </Router>
   );

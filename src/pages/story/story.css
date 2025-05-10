@@ -1,0 +1,118 @@
+/* ===== MOBILE-FIRST (DEFAULT) STYLES ===== */
+.MALLIKA {
+  line-height: 150%;
+  font-size: 16px; /* Smaller font for mobile */
+  width: 90%; /* More width utilization on small screens */
+  margin: 0 auto;
+  font-style: italic;
+}
+
+.dota {
+  background-color: #000;
+}
+
+.story_detail {
+  background-color: #d9d2ce;
+}
+
+.story_grid {
+  display: grid;
+  gap: 20px; /* Smaller gap for mobile */
+  padding: 30px; /* Less padding for mobile */
+  grid-template-columns: 1fr; /* Single column for mobile */
+}
+
+.mol {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.story_s {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.para {
+  font-family: "libr";
+  line-height: 150%;
+  font-size: 15px; /* Slightly smaller for mobile */
+}
+
+.st_img {
+  width: 100%;
+  height: 50vh; /* Smaller height for mobile */
+  object-fit: cover;
+  object-position: center 30%;
+}
+
+/* ===== TABLET (768px and up) ===== */
+@media (min-width: 768px) {
+  .MALLIKA {
+    font-size: 18px;
+  }
+
+  .story_grid {
+    gap: 30px;
+    padding: 50px;
+  }
+
+  .para {
+    font-size: 16px;
+  }
+
+  .st_img {
+    height: 55vh;
+  }
+}
+
+/* ===== LAPTOP (992px and up) ===== */
+@media (min-width: 992px) {
+  .MALLIKA {
+    font-size: 20px;
+    width: 80%;
+  }
+
+  .story_grid {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 40px;
+    padding-bottom: -70px;
+    /* padding: 70px; */
+  }
+
+  .mol {
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    gap: 40px;
+    padding: 70px;
+  }
+
+  .para {
+    font-size: 17px;
+  }
+
+  .st_img {
+    height: 65vh;
+  }
+
+  .dosa {
+    height: 90vh;
+    object-position: center 40%;
+  }
+}
+
+/* ===== EXTRA SMALL MOBILE (480px and below) ===== */
+@media (max-width: 480px) {
+  .MALLIKA {
+    font-size: 15px;
+    width: 95%;
+  }
+
+  .story_grid {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .st_img {
+    height: 40vh;
+  }
+}

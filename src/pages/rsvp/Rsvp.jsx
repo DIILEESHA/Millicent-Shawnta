@@ -1,12 +1,13 @@
 import React, { useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Button } from "antd";
+import { collection, addDoc, serverTimestamp } from "firebase/firestore";
+import { db } from "./firebaseConfig";
 import "./rsvp.css";
 
 const Rsvp = () => {
   const [isAttending, setIsAttending] = useState("");
   const [isSubmitted, setIsSubmitted] = useState(false);
-  const [loading, setLoading] = useState(false); // Loading state for button
+  const [loading, setLoading] = useState(false);
   const [formData, setFormData] = useState({
     fullName: "",
     attending: "",
@@ -37,42 +38,32 @@ const Rsvp = () => {
     setFormData({ ...formData, attending: value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true); // Start loading
+    setLoading(true);
 
-    // Prepare template parameters
-    const templateParams = {
-      fullName: formData.fullName,
-      attending: formData.attending === "yes" ? "Yes" : "No",
-      events:
-        formData.attending === "yes"
-          ? formData.events.join(", ") || "None selected"
-          : "Not attending",
-      guestCount: formData.attending === "yes" ? formData.guestCount : "N/A",
-      message: formData.message || "No message provided",
-    };
+    try {
+      // Prepare data for Firestore
+      const rsvpData = {
+        fullName: formData.fullName,
+        attending: formData.attending === "yes" ? "Yes" : "No",
+        events: formData.attending === "yes" ? formData.events : ["Not attending"],
+        guestCount: formData.attending === "yes" ? formData.guestCount : "N/A",
+        message: formData.message || "No message provided",
+        timestamp: serverTimestamp()
+      };
 
-    // Send email using EmailJS
-    emailjs
-      .send(
-        "service_wmt9bmb",
-        "template_70m244w",
-        templateParams,
-        "lddCTriC5Hm2RlEy1"
-      )
-      .then(
-        (response) => {
-          console.log("SUCCESS!", response.status, response.text);
-          setIsSubmitted(true);
-          setLoading(false); // Stop loading
-        },
-        (error) => {
-          console.log("FAILED...", error);
-          alert("Failed to submit RSVP. Please try again later.");
-          setLoading(false); // Stop loading
-        }
-      );
+      // Add document to Firestore
+      const docRef = await addDoc(collection(db, "rsvps"), rsvpData);
+      console.log("Document written with ID: ", docRef.id);
+      
+      setIsSubmitted(true);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+      alert("Failed to submit RSVP. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (isSubmitted) {
@@ -237,7 +228,6 @@ const Rsvp = () => {
               rows="4"
               value={formData.message}
               onChange={handleChange}
-              required={isAttending === "yes"}
             ></textarea>
           </div>
 

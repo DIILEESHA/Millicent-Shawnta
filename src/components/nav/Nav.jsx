@@ -15,13 +15,19 @@ const Nav = () => {
     <div>
       <div className="nav_imger">
         <div className="nav_sm">
-          <img src="https://i.imgur.com/PG68m0j.png" alt="" className="logo" />
+          <Link to="/">
+            <img
+              src="https://i.imgur.com/PG68m0j.png"
+              alt=""
+              className="logo"
+            />
+          </Link>
         </div>
         <div className="nav_sm second">
           <ul className="nav_ul">
             <li className="nav_li">
-              <Link className="a" to="/">
-                Home
+              <Link className="a" to="/story">
+                Our Story
               </Link>
             </li>
             <li className="nav_li">
@@ -32,6 +38,12 @@ const Nav = () => {
             <li className="nav_li">
               <Link className="a" to="/gallery">
                 Millicent + Shawnta
+              </Link>
+            </li>
+
+            <li className="nav_li">
+              <Link className="a" to="/qa">
+                Q + A
               </Link>
             </li>
             <li className="nav_li">
