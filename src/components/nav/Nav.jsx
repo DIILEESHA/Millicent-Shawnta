@@ -69,14 +69,26 @@ const Nav = () => {
                     Home
                   </Link>
                 </li>
+
+                <li className="nav_li_mobile">
+                  <Link className="a" to="/story" onClick={toggleMenu}>
+                    Our Story
+                  </Link>
+                </li>
                 <li className="nav_li_mobile">
                   <Link className="a" to="/wedding" onClick={toggleMenu}>
                     the wedding
                   </Link>
                 </li>
+
                 <li className="nav_li_mobile">
                   <Link className="a" to="/gallery" onClick={toggleMenu}>
                     Millicent + Shawnta
+                  </Link>
+                </li>
+                <li className="nav_li_mobile">
+                  <Link className="a" to="/qa" onClick={toggleMenu}>
+                    Q + A
                   </Link>
                 </li>
                 <li className="nav_li_mobile">
