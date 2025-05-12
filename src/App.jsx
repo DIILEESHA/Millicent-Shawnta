@@ -17,6 +17,7 @@ import "./App.css"; // We'll create this next
 import Qa from "./pages/qa/Qa";
 import Story from "./pages/story/Story";
 import AdminDashboard from "./pages/rsvp/AdminDashboard";
+import Header from "./pages/home/Header";
 
 const { Title } = Typography;
 
