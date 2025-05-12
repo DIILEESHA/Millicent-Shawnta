@@ -12,8 +12,7 @@ const Home = () => {
       <div className="bottom_home">
         <img src="https://i.imgur.com/MqGat3q.png" alt="" className="logz" />
 
-            <p className="weddo_address">Friday | NOV 8 2025 </p>
-
+        <p className="weddo_address">Friday | NOV 8 2025 </p>
       </div>
     </div>
   );

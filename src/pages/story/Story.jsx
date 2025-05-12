@@ -9,7 +9,7 @@ const Story = () => {
     <div className="hehe">
       <div className="wedding_img">
         <img
-          src="https://i.imgur.com/PEwVVRu.jpeg"
+          src="https://i.imgur.com/G86FwMW.png"
           alt=""
           className="wed_img"
         />
